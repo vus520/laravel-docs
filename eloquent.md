@@ -259,7 +259,7 @@ Laravel 自带的 Eloquent ORM 为您的数据库提供了一个优雅的、简�
 <a name="timestamps"></a>
 ## 时间戳
 
-默认情况下，Eloquent 在数据的表中自动地将维护 `created_at` 和 `updated_at` 字段。只需简单的添加这些 `datetime` 字段到表中，Eloquent 将为您做剩余的工作。如果您不希望 Eloquent 维护这些字段，在模型中添加以下属性：
+默认情况下，Eloquent 在数据的表中自动地将维护 `created_at` 和 `updated_at` 字段。只需简单的添加这些 `timestamp` 字段到表中，Eloquent 将为您做剩余的工作。如果您不希望 Eloquent 维护这些字段，在模型中添加以下属性：
 
 **禁止自动时间戳**
 
