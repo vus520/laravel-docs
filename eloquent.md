@@ -304,6 +304,23 @@ Laravel 自带的 Eloquent ORM 为您的数据库提供了一个优雅的、简�
 
 	$users = User::popular()->orderBy('created_at')->get();
 
+**动态范围**
+
+您可能希望使用一个带参数的范围。只需要添加您的参数到您的范围函数。
+
+	class User extends Eloquent {
+
+		public function scopeOfType($query, $type)
+		{
+			return $query->whereType($type);
+		}
+
+	}
+
+然后在范围函数调用中传递参数。
+
+	$users = User::ofType('member')->get();
+
 <a name="relationships"></a>
 ## 关系
 
