@@ -271,15 +271,15 @@ Laravel 自带的 Eloquent ORM 为您的数据库提供了一个优雅的、简�
 
 	}
 
-如果您希望定制时间戳的格式，可以在模型中重写 `freshTimestamp` 函数：
+如果您希望定制时间戳的格式，可以在模型中重写 `getDateFormat` 函数：
 
 **提供一个定制的时间戳格式**
 
 	class User extends Eloquent {
 
-		public function freshTimestamp()
+		public function getDateFormat()
 		{
-			return time();
+			return 'U';
 		}
 
 	}
