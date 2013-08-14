@@ -61,6 +61,7 @@ Laravel 要求一组权限被设置 - `app/storage` 目录下的文件夹必须�
 
 	Options +FollowSymLinks
 	RewriteEngine On
-
+	
+	RewriteCond %{REQUEST_FILENAME} !-d
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteRule ^ index.php [L]
