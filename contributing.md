@@ -7,7 +7,7 @@
 <a name="introduction"></a>
 ## 简介
 
-Laravel 是免费、开源的软件，这意味着任何人都可以对它的发展和进步做出贡献。Laravel 源码目前托管在 [Github](http://github.com)，它提供了 Fork 项目以及合并您贡献的代码的简易的方法。
+Laravel 是免费、开源的软件，这意味着任何人都可以对它的发展和进步做出贡献。Laravel 源码目前托管在 [Github](http://github.com/laravel)，它提供了 Fork 项目以及合并您贡献的代码的简易的方法。
 
 <a name="pull-requests"></a>
 ## 推送请求
