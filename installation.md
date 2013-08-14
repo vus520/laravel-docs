@@ -18,7 +18,7 @@ Laravel 使用 [Composer](http://getcomposer.org) 管理包依赖关系。 首�
 
 您可以通过运行 Composer 的 `create-project` 命令安装 Laravel：
 
-	composer create-project laravel/laravel
+	composer create-project laravel/laravel --prefer-dist
 
 ### 通过下载
 
