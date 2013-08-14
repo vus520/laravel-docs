@@ -23,11 +23,12 @@ Laravel 为大型、健壮的应用提供了易用且强大的工具，比如一
 
 - [Code Bright](https://leanpub.com/codebright) by Dayle Rees
 - [Laravel Testing Decoded](https://leanpub.com/laravel-testing-decoded) by Jeffrey Way
+- [Laravel: From Apprentice To Artisan](https://leanpub.com/laravel) by Taylor Otwell 
 
 <a name="development-team"></a>
 ## 开发团队
 
-Laravel 由 [Taylor Otwell](https://github.com/taylorotwell) 创建并领导框架的开发。其他主要的社区成员和贡献者包括 [Dayle Rees](https://github.com/daylerees), [Shawn McCool](https://github.com/ShawnMcCool), [Jeffrey Way](https://github.com/JeffreyWay), [Jason Lewis](https://github.com/jasonlewis), [Ben Corlett](https://github.com/bencorlett), [Franz Liedke](https://github.com/franzliedke), [Dries Vints](https://github.com/driesvints), [Mior Muhammed Zaki](https://github.com/crynobone), 以及 [Phil Sturgeon](https://github.com/philsturgeon).
+Laravel 由 [Taylor Otwell](https://github.com/taylorotwell) 创建并领导框架的开发。其他主要的社区成员和贡献者包括 [Dayle Rees](https://github.com/daylerees), [Shawn McCool](https://github.com/ShawnMcCool), [Jeffrey Way](https://github.com/JeffreyWay), [Jason Lewis](https://github.com/jasonlewis), [Ben Corlett](https://github.com/bencorlett), [Franz Liedke](https://github.com/franzliedke), [Dries Vints](https://github.com/driesvints), [Mior Muhammad Zaki](https://github.com/crynobone), 以及 [Phil Sturgeon](https://github.com/philsturgeon).
 
 <a name="framework-sponsors"></a>
 ## 赞助
