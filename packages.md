@@ -134,6 +134,18 @@
 
 	Config::get('package::option');
 
+有时您可能希望在典型的 `$this->package` 方法外注册包资源比如视图。通常，只在资源不在一个合适的地方才会用到。为了手动注册资源，您可以在 `View`、`Lang` 以及 `Config` 类中调用 `addNamespace` 函数：
+
+**手动注册一个资源名字空间**
+
+	View::addNamespace('package', __DIR__.'/path/to/views');
+
+一旦名字空间被注册，您可以使用此名字空间并使用双冒号语法获取资源：
+
+	return View::make('package::view.name');
+
+`addNamespace` 函数的签名在 `View`、`Lang`、以及 `Config` 类中是相同的。
+
 ### 配置文件层叠
 
 当其他的开发者安装了您的包，他们可能希望重写一些您配置中的选项。然而，如果他们改变包的源代码的值，他们需要在 Composer 升级这个包的时候再次重写一次。相反，`config:publish` Artisan 命令可以被使用：
