@@ -4,6 +4,7 @@
 - [Session 用法](#session-usage)
 - [闪存数据](#flash-data)
 - [数据库 Sessions](#database-sessions)
+- [Session 驱动](#session-drivers)
 
 <a name="configuration"></a>
 ## 配置
@@ -82,3 +83,16 @@ Session 的配置存放在 `app/config/session.php` 文件。请确认浏览了�
 	composer dump-autoload
 
 	php artisan migrate
+
+<a name="session-drivers"></a>
+## Session 驱动
+
+Session 驱动定义 Session 数据存储的位置。
+
+- `native` - session 由原生PHP处理
+- `cookie` - session 将存储在 cookies 中
+- `database` - session 将存储在数据库中 (默认在 `sessions` 表中)
+- `memcached` / `redis` - 使用守护程序中的一个
+- `array` - session 将被存储在普通的数组中 (由 `Symfony\HttpFoundation\Session\Storage\MockArraySessionStorage` 处理)
+
+数组驱动通常用于执行 [单元测试](/docs/testing) 意味着在测试中没有 session 或者 cache 数据将被持续保存。这意味着 session 只适用于单个请求，因为它在 PHP 运行时存储。
