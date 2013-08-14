@@ -356,6 +356,17 @@ Laravel 自带的 Eloquent ORM 为您的数据库提供了一个优雅的、简�
 
 	}
 
+在上面的例子中，Eloquent 将在 `phones` 表中寻找 `user_id` 字段。如果您想定义一个不同的外键字段，您可以通过第二个参数传递它：
+
+	class Phone extends Eloquent {
+
+		public function user()
+		{
+			return $this->belongsTo('User', 'custom_key');
+		}
+
+	}
+
 <a name="one-to-many"></a>
 ### 一对多
 
