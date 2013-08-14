@@ -12,7 +12,7 @@
 
 为了安装 Laravel 框架，可以在终端输入以下命令：
 
-	composer create-project laravel/laravel your-project-name
+	composer create-project laravel/laravel your-project-name --prefer-dist
 
 或者，也可以从 Github 下载 [代码库](https://github.com/laravel/laravel/archive/master.zip)。在 [安装 Composer](http://getcomposer.org) 之后，在项目文件的主目录下运行 `composer install` 命令，这个命令将下载和安装框架的依赖文件。
 
