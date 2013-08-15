@@ -20,6 +20,10 @@ Session 的配置存放在 `app/config/session.php` 文件。请确认浏览了�
 
 	Session::put('key', 'value');
 
+**向 Session 的一个数组变量中添加一个值** 
+
+	Session::push('user.teams', 'developers'); 
+
 **从 Session 中获取一个变量**
 
 	$value = Session::get('key');
