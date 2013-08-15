@@ -112,13 +112,13 @@ Blade 是 Laravel 提供的一个简单但很强大的模板引擎。不像控�
 
 	@include('view.name')
 
-您也可以传递数据给子视图：
+您也可以传递数据给包含的视图：
 	
 	@include('view.name', array('some'=>'data'))
 	
-**使用其他子视图扩展子视图**
+**重写段**
 
-嵌套的子视图可以扩展子其他子视图。比如，您需要列出不同的项目，但是他们都使用相同的容器。要做到这一点，使用 **@overwrite** 表达式：
+默认情况下，段将附加到在此之前内容的后面。要完全重写段，您可以使用 `overwrite` 语句:
 	
 	@extends('list.item.container')
 	
