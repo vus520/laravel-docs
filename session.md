@@ -30,6 +30,10 @@ Session 的配置存放在 `app/config/session.php` 文件。请确认浏览了�
 
 	$value = Session::get('key', function() { return 'default'; });
 
+**从 Session 中获取全部变量**
+
+	$data = Session::all(); 
+
 **检查一个变量是否在 Session 中存在**
 
 	if (Session::has('users'))
