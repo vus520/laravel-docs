@@ -93,11 +93,13 @@
 
 **传递数据至视图**
 
-	$view = View::make('greeting', $data);
-
 	$view = View::make('greeting')->with('name', 'Steve');
 
 在上面的例子中，变量 `$name` 将在视图中可以访问，并且包含 `Steve` 值。
+
+您也可以传递一个变量的数组作为 `make` 函数的第二个参数：
+
+	$view = View::make('greetings', $data);
 
 您也可以向所有视图共享一个变量的值：
 
