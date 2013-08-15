@@ -95,7 +95,7 @@ Cache 类继承自基类 `Facade` 并且定义了一个 `getFacadeAccessor()` �
 
 	Payment::process();
 
-> **注意:** 在某些情况下 `aliases`  数组中的类可能不可用因为 [PHP 不会尝试自动加载未定义的类型提示的类](https://bugs.php.net/bug.php?id=39003)。 如果 `ApiTimeoutException` 作为 `\ServiceWrapper\ApiTimeoutException` 的别名，在 `\ServiceWrapper` 名字空间之外的 `catch(ApiTimeoutException)` 将永远不会捕获到异常。一个相似的问题也出现在模型中有类型提示的类。唯一的解决办法是放弃别名并且在每个文件的顶部 `use` 希望类型提示的类，将包含它们。
+> **注意:** 在某些情况下 `aliases`  数组中的类可能不可用因为 [PHP 不会尝试自动加载未定义的类型提示的类](https://bugs.php.net/bug.php?id=39003)。 如果 `ApiTimeoutException` 作为 `\ServiceWrapper\ApiTimeoutException` 的别名，在 `\ServiceWrapper` 名字空间之外的 `catch(ApiTimeoutException $e)` 将永远不会捕获到异常。一个相似的问题也出现在模型中有类型提示的类。唯一的解决办法是放弃别名并且在每个文件的顶部 `use` 希望类型提示的类，将包含它们。
 
 <a name="mocking-facades"></a>
 ## 模拟外观
