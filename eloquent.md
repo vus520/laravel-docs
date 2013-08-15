@@ -96,6 +96,12 @@ Laravel 自带的 Eloquent ORM 为您的数据库提供了一个优雅的、简�
 
 	$users = User::whereRaw('age > ? and votes = 100', array(25))->get();
 
+**指定查询的数据库连接**
+
+您可能需要在运行一个 Eloquent 查询的时候指定数据库连接，只需要使用 `on` 函数：
+
+	$user = User::on('connection-name')->find(1);
+
 <a name="mass-assignment"></a>
 ## 集体赋值
 
