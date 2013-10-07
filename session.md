@@ -4,6 +4,7 @@
 - [Session 用法](#session-usage)
 - [闪存数据](#flash-data)
 - [数据库 Sessions](#database-sessions)
+- [Session 驱动](#session-drivers)
 
 <a name="configuration"></a>
 ## 配置
@@ -19,6 +20,10 @@ Session 的配置存放在 `app/config/session.php` 文件。请确认浏览了�
 
 	Session::put('key', 'value');
 
+**向 Session 的一个数组变量中添加一个值** 
+
+	Session::push('user.teams', 'developers'); 
+
 **从 Session 中获取一个变量**
 
 	$value = Session::get('key');
@@ -28,6 +33,10 @@ Session 的配置存放在 `app/config/session.php` 文件。请确认浏览了�
 	$value = Session::get('key', 'default');
 
 	$value = Session::get('key', function() { return 'default'; });
+
+**从 Session 中获取全部变量**
+
+	$data = Session::all(); 
 
 **检查一个变量是否在 Session 中存在**
 
@@ -82,3 +91,16 @@ Session 的配置存放在 `app/config/session.php` 文件。请确认浏览了�
 	composer dump-autoload
 
 	php artisan migrate
+
+<a name="session-drivers"></a>
+## Session 驱动
+
+Session 驱动为每个请求定义了 Session 数据存储的位置。Laravel 提供了几种即用的驱动：
+
+- `native` - session 由原生PHP处理
+- `cookie` - session 将存储在 cookies 中
+- `database` - session 将存储在数据库中 (默认在 `sessions` 表中)
+- `memcached` / `redis` - 使用守护程序中的一个
+- `array` - session 将被存储在普通的数组中 (由 `Symfony\HttpFoundation\Session\Storage\MockArraySessionStorage` 处理)
+
+> **注意:** 数组驱动通常用于执行 [单元测试](/docs/testing)，所以没有 session 数据将被持久化保存。

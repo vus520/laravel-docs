@@ -109,13 +109,8 @@ Laravel 提供了一个简单的办法保护您的应用抵御跨域攻击。首
 	
 **创建其他输入框**
 
-	echo Form::date($name, $value = null, $attributes = array());
 	echo Form::email($name, $value = null, $attributes = array());
 	echo Form::file($name, $attributes = array());
-	echo Form::number($name, $value = null, $attributes = array());
-	echo Form::search($name, $value = null, $attributes = array());
-	echo Form::telephone($name, $value = null, $attributes = array());
-	echo Form::url($name, $value = null, $attributes = array());
 	
 <a name="checkboxes-and-radio-buttons"></a>
 ## 复选框和单选按钮

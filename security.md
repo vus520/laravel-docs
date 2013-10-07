@@ -297,6 +297,6 @@ Laravel 通过 PHP mcrypt 扩展使用强大的 AES-256 加密。
 
 **设置算法和模式**
 
-	Crypt::setMode('crt');
+	Crypt::setMode('ctr');
 
 	Crypt::setCipher($cipher);

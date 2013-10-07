@@ -38,6 +38,8 @@
 
 一旦供应商被注册，您就可以开发您的包了！但是，在开始之前，您可能希望浏览下面的章节对包结构和开发流程进行更深入的了解。
 
+> **注意:** 如果您不能够找到服务供应商，请在应用程序的根目录下运行 `php artisan dump-autoload` 命令。
+
 <a name="package-structure"></a>
 ## 包结构
 
@@ -131,6 +133,18 @@
 **访问包的单文件配置**
 
 	Config::get('package::option');
+
+有时您可能希望在典型的 `$this->package` 方法外注册包资源比如视图。通常，只在资源不在一个合适的地方才会用到。为了手动注册资源，您可以在 `View`、`Lang` 以及 `Config` 类中调用 `addNamespace` 函数：
+
+**手动注册一个资源名字空间**
+
+	View::addNamespace('package', __DIR__.'/path/to/views');
+
+一旦名字空间被注册，您可以使用此名字空间并使用双冒号语法获取资源：
+
+	return View::make('package::view.name');
+
+`addNamespace` 函数的签名在 `View`、`Lang`、以及 `Config` 类中是相同的。
 
 ### 配置文件层叠
 

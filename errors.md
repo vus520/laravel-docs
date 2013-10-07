@@ -82,6 +82,10 @@ Laravel 的日志工具提供了强大的 [Monolog](http://github.com/seldaek/mo
 
 日志工具根据在 [RFC 5424](http://tools.ietf.org/html/rfc5424) 定义了7个日志等级，分别是： **debug**, **info**, **notice**, **warning**, **error**, **critical** 以及 **alert**。
 
+一个包含上下文数据的数组也可以传递给日志函数：
+
+	Log::info('Log message', array('context' => 'Other helpful information'));
+
 Monolog 有许多其他的处理器您可以用来产生日志，如果您愿意，您可以获取 Laravel 使用的底层的 Monolog 实例：
 
 	$monolog = Log::getMonolog();

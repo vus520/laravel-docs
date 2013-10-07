@@ -110,6 +110,10 @@
 
 	$path = Input::file('photo')->getRealPath();
 
+**获取上传文件的原始文件名**
+
+	$name = Input::file('photo')->getClientOriginalName(); 
+
 **获取一个已上传文件的大小**
 
 	$size = Input::file('photo')->getSize();

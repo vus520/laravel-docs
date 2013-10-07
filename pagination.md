@@ -53,6 +53,16 @@
 
 	$paginator = Paginator::make($items, $totalItems, $perPage);
 
+**自定义分页 URI**
+
+您可以通过 `setBaseUrl` 函数指定分页所使用的URI：
+
+	$users = User::paginate();
+
+	$users->setBaseUrl('custom/url');
+
+上面的例子将创建类似这样的URLs：http://example.com/custom/url?page=2
+
 <a name="appending-to-pagination-links"></a>
 ## 分页链接附加
 
