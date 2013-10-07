@@ -84,6 +84,14 @@
 	})
 	->where('id', '[0-9]+');
 
+当然，您可以在需要的时候传递一组约束：
+
+	Route::get('user/{id}/{name}', function($id, $name)
+	{
+		//
+	})
+	->where(array('id' => '[0-9]+', 'name' => '[a-z]+'))
+
 <a name="route-filters"></a>
 ## 路由过滤器
 

@@ -12,7 +12,7 @@
 
 为了安装 Laravel 框架，可以在终端输入以下命令：
 
-	composer create-project laravel/laravel your-project-name
+	composer create-project laravel/laravel your-project-name --prefer-dist
 
 或者，也可以从 Github 下载 [代码库](https://github.com/laravel/laravel/archive/master.zip)。在 [安装 Composer](http://getcomposer.org) 之后，在项目文件的主目录下运行 `composer install` 命令，这个命令将下载和安装框架的依赖文件。
 
@@ -74,7 +74,7 @@
 
 为了创建一张表保存我们的数据，我们将使用 Laravel 的迁移系统。迁移系统允许我们用具有表现力的方式定义数据库的修改，并且很方便的与团队的其他成员共享。
 
-首先，让我们配置数据库的连接。您可以 `app/config/database.php` 文件中配置所有数据库的连接。默认情况下，Laravel 使用 SQLite，并且 SQLite 数据库保存在 `app/database` 目录下，如果您愿意，您也可以改变 `driver` 选项为 `mysql` 并且在配置文件中设置 `mysql` 的连接认证参数。
+首先，让我们配置数据库的连接。您可以 `app/config/database.php` 文件中配置所有数据库的连接。默认情况下，Laravel 使用 MySQL，您需要在数据库配置文件中提供连接认证参数。如果您愿意，您也可以改变 `driver` 选项为 `sqlite`，将使用 `app/database` 目录下的 SQLite 数据库。
 
 下面，为了创建迁移，我们将使用 [Artisan 命令行](/docs/artisan)。切换到项目的根目录，在终端执行下面的命令：
 

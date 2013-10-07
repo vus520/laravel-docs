@@ -61,6 +61,7 @@ Laravel 的 `Schema` 类提供了一种与数据库无关的方式维护表。�
 命令  | 描述
 ------------- | -------------
 `$table->increments('id');`  |  自动增长的 ID (主键).
+`$table->bigIncrements('id');`  |  类似"big integer"类型的自动增长的 ID. 
 `$table->string('email');`  |  VARCHAR 类型 
 `$table->string('name', 100);`  |  带长度的 VARCHAR 类型
 `$table->integer('votes');`  |  INTEGER 类型
